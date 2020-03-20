@@ -1,5 +1,7 @@
 function meleeRangedGrouping (str) {
   //your code here
+
+  // Methode untuk split dan grouping
   var method = {
     spliting(arr, by){
       let str = '';
@@ -31,12 +33,15 @@ function meleeRangedGrouping (str) {
       return arrHasil;
     }
   }
+
+  // Proses Spliting
   const split1 = method.spliting(str, ",");
   const split2 = [];
   for(let i = 0; i < split1.length; i++){
     split2.push(method.spliting(split1[i], "-"));
   }
-  // if(!str.length) return "''";
+  
+  // Proses Grouping
   return method.grouping(split2, 1, 0);
 }
 
