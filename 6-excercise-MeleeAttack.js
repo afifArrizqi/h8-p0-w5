@@ -35,14 +35,14 @@ function meleeRangedGrouping (str) {
   }
 
   // Proses Spliting
-  const split1 = method.spliting(str, ",");
-  const split2 = [];
-  for(let i = 0; i < split1.length; i++){
-    split2.push(method.spliting(split1[i], "-"));
+  const splitPlayers = method.spliting(str, ",");
+  const splitMeleeRanged = [];
+  for(let i = 0; i < splitPlayers.length; i++){
+    splitMeleeRanged.push(method.spliting(splitPlayers[i], "-"));
   }
-  
+
   // Proses Grouping
-  return method.grouping(split2, 1, 0);
+  return method.grouping(splitMeleeRanged, 1, 0);
 }
 
 
